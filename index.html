@@ -1,47 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <style>
-     h2{
-        background: #000;
-     }
 
 
-    </style>
-</head>
-<body>
-
-
-
-
-    <input       type="color"  placeholder="enter color"  id="input"   >
-
-
-
-
-
-    <br><br><br><br><br><br><br><br><br><br>
-    <h1  id="hellow">hellow worlds</h1>
-
-    <i  id="image"class="fa-solid fa-car"></i>
-
-
-
-
-    
-
-
-
- 
-    <script src="app.js"></script>
-</body>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,180 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Color Customizer</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: all 0.3s ease;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #f0f2f5 0%, #dfe6e9 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-        }
-        
-        h1 {
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            background: linear-gradient(90deg, #2c3e50, #3498db);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            position: relative;
-            display: inline-block;
-        }
-        
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50%;
-            height: 4px;
-            background: linear-gradient(90deg, #2c3e50, #3498db);
-            border-radius: 2px;
-        }
-        
-        .color-picker-container {
-            margin: 30px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .color-label {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #555;
-            font-weight: 500;
-        }
-        
-        #input {
-            width: 100px;
-            height: 100px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            outline: none;
-            -webkit-appearance: none;
-        }
-        
-        #input::-webkit-color-swatch {
-            border: none;
-            border-radius: 50%;
-        }
-        
-        #input::-webkit-color-swatch-wrapper {
-            padding: 0;
-            border-radius: 50%;
-        }
-        
-        .car-display {
-            margin-top: 40px;
-            position: relative;
-            height: 200px;
-        }
-        
-        .car-icon {
-            font-size: 8rem;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-        }
-        
-        .road {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40px;
-            background: #34495e;
-            border-radius: 0 0 20px 20px;
-            z-index: 1;
-        }
-        
-        .road-line {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: repeating-linear-gradient(
-                to right,
-                #ecf0f1,
-                #ecf0f1 20px,
-                transparent 20px,
-                transparent 40px
-            );
-        }
-        
-        .car-name {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-top: 120px;
-            padding: 15px 30px;
-            border-radius: 50px;
-            background: #f8f9fa;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        
-        .hex-code {
-            margin-top: 20px;
-            font-size: 1.2rem;
-            font-family: monospace;
-            padding: 10px 20px;
-            background: #f8f9fa;
-            border-radius: 50px;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .instructions {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: #777;
-            font-style: italic;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .car-icon {
-                font-size: 6rem;
-            }
-        }
-    </style>
+ 
 </head>
 <body>
     <div class="container">
-        <h1>Car Color Customizer</h1>
+        <h1 id="h1" >Car Color Customizer</h1>
         
         <div class="color-picker-container">
             <label for="input" class="color-label">Choose your car color:</label>
@@ -233,39 +24,16 @@
             <div class="road">
                 <div class="road-line"></div>
             </div>
-            <i id="image" class="fa-solid fa-car-side car-icon"></i>
+            <i style="color: #3498db;" id="image" class="fa-solid fa-car-side car-icon"></i>
         </div>
         
-        <div class="car-name" id="hellow">My Awesome Car</div>
-        <div class="hex-code" id="hexCode">#3498DB</div>
+        <div style="color: #3498db;" class="car-name" id="hellow">My Awesome Car</div>
+        <div  style="color: #3498db;" class="hex-code" id="hexCode">#3498DB</div>
         
         <p class="instructions">Click on the color circle above to customize your car's color!</p>
     </div>
-
-    <script>
-        const input = document.querySelector("#input");
-        const hellow = document.querySelector("#hellow");
-        const image = document.querySelector("#image");
-        const hexCode = document.querySelector("#hexCode");
-        
-        updateColors(input.value);
-        
-        input.addEventListener('input', () => {
-            updateColors(input.value);
-        });
-        
-        function updateColors(color) {
-            hellow.style.color = color;
-            image.style.color = color;
-            hexCode.textContent = color.toUpperCase();
-            hexCode.style.color = color;
-            
-
-            image.style.transform = 'translateX(-50%) scale(1.1)';
-            setTimeout(() => {
-                image.style.transform = 'translateX(-50%) scale(1)';
-            }, 200);
-        }
-    </script>
+<script src="app.js"></script>
 </body>
 </html>
+
+
